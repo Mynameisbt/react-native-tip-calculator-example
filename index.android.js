@@ -38,10 +38,11 @@ class TipResult extends Component{
     } else {
         actualTip =(tipResult/price).toFixed(2);
     }
+    var tipPercent  = actualTip* 100;
     return (
       <View style={styles.resultContainer}>
       <Text style={styles.label}>
-           Total Tip: ${tipResult.toFixed(2)} Tip Percent: {actualTip*100}%
+           Total Tip: ${tipResult.toFixed(2)} Tip Percent: {tipPercent.toFixed(2)}%
       </Text>
       <Text style={styles.label}>
              Total Bill: ${(totalPrice + tipResult).toFixed(2)}
